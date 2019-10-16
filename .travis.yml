@@ -1,17 +1,17 @@
 #kcdharam
 language: node_js
 node_js:
-   - "10.9.0"
+  - 10.9.0
 
 cache: npm
 
-before_install:
-   - ls -la
-   - mkdir public
-   - ls -la
-
 install:
-   - ls -la
-   - npm install
-   - ls -la
+  - npm install
 
+script:
+  - npm run build
+  - npm run test
+  
+before_install:
+  - "npm config set spin false"
+  - npm i -g now
