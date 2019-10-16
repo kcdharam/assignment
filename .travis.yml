@@ -20,5 +20,5 @@ before_install:
 deploy:
   provider: script
   script: bash scripts/deploy.sh
-  skip_cleanup: trued
+  skip_cleanup: true
   
